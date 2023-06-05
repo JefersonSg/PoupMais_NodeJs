@@ -1,6 +1,11 @@
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('poupmais', 'root', '', {
+// const sequelize = new Sequelize('poupmais', 'root', '', {
+//   host: 'localhost',
+//   dialect: 'mysql',
+// });
+
+const sequelize = new Sequelize('poupmais', 'root', 'SenhaServer132*', {
   host: 'localhost',
   dialect: 'mysql',
 });
@@ -11,3 +16,5 @@ try {
 } catch (error) {
   console.log(error);
 }
+
+module.exports = sequelize;
