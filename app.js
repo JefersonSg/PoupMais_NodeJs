@@ -6,8 +6,8 @@ var logger = require('morgan');
 const exphbs = require('express-handlebars');
 const { engine } = require('express-handlebars');
 const session = require('express-session');
-const FileStore = require('session-file-store')(session);
-const flash = require('express-flash');
+// const FileStore = require('session-file-store')(session);
+// const flash = require('express-flash');
 
 // Routes
 // var movimentacoesRouter = require('./routes/movimentacoesRouter');
@@ -68,6 +68,7 @@ app.use((req, res, next) => {
   }
   next();
 });
+
 app.use('/', authRouter);
 
 // catch 404 and forward to error handler
